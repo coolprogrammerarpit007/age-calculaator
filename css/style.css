@@ -1,0 +1,193 @@
+/* CSS BOILER PLATE */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+/* End of css boilerplate */
+
+/* CSS STYLE PLATETTE */
+
+/* ## Colors
+
+### Primary
+
+- Purple: hsl(259, 100%, 65%)
+- Light red: hsl(0, 100%, 67%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Off white: hsl(0, 0%, 94%)
+- Light grey: hsl(0, 0%, 86%)
+- Smokey grey: hsl(0, 1%, 44%)
+- Off black: hsl(0, 0%, 8%)
+
+## Typography
+
+### Body Copy
+
+- Font size (inputs): 32px
+
+### Font */
+
+/*  ********************************** */
+/*  ********************************** */
+
+/* STYLING STARTS FROM HERE */
+
+body {
+  font-size: 2rem;
+  font-family: "Poppins", "Verdana";
+  background-color: hsl(0, 0%, 86%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling the age calculator container */
+
+.age-calculator-container {
+  background-color: hsl(0, 0%, 94%);
+  padding: 4rem;
+  width: 50%;
+  height: auto;
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* styling the day input container  */
+
+.birth-year-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.day-input {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+input {
+  width: 60%;
+  padding: 1.5rem;
+  border-radius: 0.7rem;
+  border: 1px solid hsl(0, 1%, 44%);
+}
+
+.day-input > .date {
+  color: hsl(0, 1%, 44%);
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+/* Styling the icon as a button */
+
+#calculate-btn {
+  background-color: hsl(259, 100%, 65%);
+  padding: 1.5rem;
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin: 1rem 55rem;
+  transition: all 0.7s;
+  cursor: pointer;
+}
+
+#calculate-btn:hover {
+  background-color: hsl(0, 1%, 44%);
+  color: hsl(259, 100%, 65%);
+  border: 1px solid hsl(259, 100%, 65%);
+}
+
+.calculate-btn > img {
+  width: 50%;
+}
+
+/* Styling the age tracker section */
+
+/* .new-age-tracker {
+  display: flex;
+  flex-direction: column;
+} */
+
+.age-tracker {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.box {
+  width: 3rem;
+  height: 1rem;
+  background-color: hsl(259, 100%, 65%);
+  margin: 0.5rem;
+}
+
+.new-age {
+  font-size: 1.4rem;
+  color: hsl(0, 0%, 8%);
+  font-weight: bold;
+}
+
+.error-date {
+  border: 1px solid hsl(0, 100%, 67%);
+}
+
+/* // Making the responive design */
+
+@media (max-width: 800px) {
+  .birth-year-input {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  input {
+    width: 100%;
+  }
+  .age-calculator-container {
+    padding: 2rem;
+    width: 70%;
+    height: auto;
+    border-bottom-right-radius: 8rem;
+    gap: 1rem;
+  }
+
+  #calculate-btn {
+    padding: 1.5rem;
+    width: 20%;
+    margin: 0.5rem auto;
+  }
+
+  .age-tracker {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+}
