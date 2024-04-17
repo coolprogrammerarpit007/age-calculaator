@@ -45,18 +45,19 @@ btn.addEventListener("click", (e) => {
     let daysOld = totalDays - userInputDay + currentDay;
     let monthsOld = totalMonths - userInputMonth + currentMonth;
     let yearsOld = currentYear - userInputYear - 1;
-    if (daysOld === 30) {
+    console.log(daysOld, monthsOld, yearsOld);
+    if (daysOld >= 30) {
       monthsOld++;
-      daysOld = 0;
+      console.log(monthsOld);
+      daysOld = Math.abs(totalDays - daysOld);
     }
-    if (monthsOld === 12) {
+    if (monthsOld >= 12) {
       yearsOld++;
-      monthsOld = 0;
+      monthsOld = monthsOld - totalMonths;
     }
     if (yearsOld < 0) {
       yearsOld = 0;
     }
-
     // Updating UI WITH YEARS
 
     setTimeout(() => {
